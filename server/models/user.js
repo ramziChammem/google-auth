@@ -7,8 +7,18 @@ module.exports = sequelize.define("user", {
     autoIncrement: true,
     primaryKey: true,
   },
-  firstName: Sequelize.STRING(25),
-  lastName: Sequelize.STRING(25),
-  email: Sequelize.STRING(50),
-  password: Sequelize.STRING(100),
+  usertName: {
+    type: Sequelize.STRING(25),
+    allowNull: false,
+    unique: true,
+  },
+  email: {
+    type: Sequelize.STRING(50),
+    allowNull: false,
+    unique: true,
+  },
+  password: {
+    type: Sequelize.STRING(50),
+    allowNull: false,
+  },
 });
